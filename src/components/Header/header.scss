@@ -1,0 +1,30 @@
+@import '../../utils/style/variable';
+
+header {
+  width: 335px;
+  height: 47px;
+  margin: 20px 0 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    height: 47px;
+    width: 145px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+  }
+  nav {
+    display: flex;
+    gap: 10px;
+    a {
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

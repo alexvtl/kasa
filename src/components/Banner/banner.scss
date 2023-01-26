@@ -1,0 +1,26 @@
+@import '../../utils/style/variable';
+
+.banner {
+  align-items: center;
+  display: flex;
+  position: relative;
+  &_bckground {
+    border-radius: 10px;
+    filter: brightness(65%);
+    height: 111px;
+    position: relative;
+    width: 335px;
+  }
+  &_txt {
+    color: $secondary-color;
+    position: absolute;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    left: 10%;
+    width: 60%;
+  }
+}
