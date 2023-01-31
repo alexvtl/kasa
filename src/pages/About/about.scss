@@ -1,0 +1,15 @@
+.about {
+  width: 336px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  &_banner {
+    width: 336px;
+    height: 223px;
+    margin: auto;
+    &_cover {
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+}

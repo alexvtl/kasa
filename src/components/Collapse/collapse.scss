@@ -1,0 +1,28 @@
+@import '../../utils/style/variable';
+
+.collapse {
+  height: 30px;
+  width: 335px;
+  border-radius: 5px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background-color: $primary-color;
+  &_title {
+    font-size: 14px;
+    color: white;
+    margin: auto 0;
+  }
+}
+.collapse_texte {
+  color: $primary-color;
+  background-color: $tertiary-color;
+  font-size: 12px;
+  font-weight: 400;
+  width: 335px;
+  padding: 20px 5px;
+  text-align: center;
+  position: relative;
+  bottom: -100px;
+}

@@ -1,11 +1,12 @@
 import LogoFooter from '../../assets/LogoFooter.png';
 import TextFooter from '../../assets/TextFooter.png';
+import './footer.scss';
 
 function Footer() {
   return (
-    <div>
-      <img src={LogoFooter} alt="logo Footer" />
-      <img src={TextFooter} alt="logo Footer" />
+    <div className="footer">
+      <img className="footer_logo" src={LogoFooter} alt="logo Footer" />
+      <img className="footer_text" src={TextFooter} alt="logo Footer" />
     </div>
   );
 }
