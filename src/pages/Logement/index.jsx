@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import Carrousel from '../../components/Carrousel/carrousel.jsx';
 import log from '../../Products/product.json';
 import Tags from '../../components/Tags/tags.jsx';
+import Rate from '../../components/Rate/rate.jsx';
+import Collapse from '../../components/Collapse/index.jsx';
 import './logement.scss';
 
 function Logement() {
@@ -25,10 +27,10 @@ function Logement() {
   // };
   // Apilogement();
   //  }, []);
-
+  console.log(foundlog.rating);
   return (
     <div className="logement">
-      <Carrousel slides={foundlog.pictures} />
+      <Carrousel key={foundlog.id} slides={foundlog.pictures} />
       <div className="logement_title">
         <h2 className="logement_title_h2">{foundlog.title}</h2>
         <p className="logement_title_location">{foundlog.location}</p>
@@ -39,12 +41,11 @@ function Logement() {
         ))}
       </div>
       <div className="logement_host_box">
-        <div className="logement_host_stars"></div>
+        <Rate rating={foundlog.rating} />
         <div className="logement_host_description">
           <p className="logement_host_description_name">
-            {foundlog.host.name.split(' ')[0]}
-            <br />
-            {foundlog.host.name.split(' ')[1]}
+            <span>{foundlog.host.name.split(' ')[0]}</span>
+            <span>{foundlog.host.name.split(' ')[1]}</span>
           </p>
           <img
             className="logement_host_description_picture"
@@ -52,6 +53,25 @@ function Logement() {
             alt={'picure of ' + foundlog.host.name}
           />
         </div>
+      </div>
+      <div className="logement_description_box">
+        <Collapse
+          className="logement_description_collapse description"
+          title="Description"
+          texte={foundlog.description}
+        />
+        <Collapse
+          className="logement_description_collapse equipements"
+          title="Équipements"
+          texte={foundlog.equipments.map((eqpmt) => (
+            <p
+              className="logement_description_collapse_p"
+              key={eqpmt.toString()}
+            >
+              {eqpmt}
+            </p>
+          ))}
+        />
       </div>
     </div>
   );

@@ -1,0 +1,14 @@
+.logement_host_stars {
+  display: flex;
+  height: 33px;
+  align-items: center;
+  gap: 5px;
+  &_red {
+    height: 15px;
+    width: 15px;
+  }
+  &_grey {
+    height: 15px;
+    width: 15px;
+  }
+}

@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 336px;
+  margin: 27px auto 100px;
   &_title {
     display: flex;
     flex-direction: column;
@@ -36,12 +38,29 @@
     &_name {
       font-size: 12px;
       text-align: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     &_picture {
       width: 32px;
       height: 32px;
       border-radius: 50%;
       object-fit: cover;
+    }
+  }
+  &_description_box {
+    width: 335px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 6px auto;
+  }
+  &_description_collapse {
+    font-size: 12px;
+    font-weight: 400;
+    &_p {
+      margin-bottom: 5px;
     }
   }
 }
