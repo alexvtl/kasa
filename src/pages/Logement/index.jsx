@@ -64,12 +64,12 @@ function Logement() {
           className="logement_description_collapse equipements"
           title="Équipements"
           texte={foundlog.equipments.map((eqpmt) => (
-            <p
+            <li
               className="logement_description_collapse_p"
               key={eqpmt.toString()}
             >
               {eqpmt}
-            </p>
+            </li>
           ))}
         />
       </div>

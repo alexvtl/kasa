@@ -16,7 +16,7 @@ function Carrousel({ slides }) {
     const lastSlide = currentIndex === slides.length - 1;
     lastSlide ? setcurrentIndex(0) : setcurrentIndex(currentIndex + 1);
   }
-  return (
+  return slides.length > 1 ? (
     <div
       className="carrousel"
       style={{ backgroundImage: `url(${slides[currentIndex]})` }}
@@ -37,7 +37,15 @@ function Carrousel({ slides }) {
       >
         <i className="fa-solid fa-chevron-up"></i>
       </button>
+      <div className="carrousel_img_index">
+        {currentIndex + 1}/{slides.length}
+      </div>
     </div>
+  ) : (
+    <div
+      className="carrousel"
+      style={{ backgroundImage: `url(${slides[currentIndex]})` }}
+    ></div>
   );
 }
 

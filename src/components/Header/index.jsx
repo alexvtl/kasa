@@ -5,13 +5,15 @@ import './header.scss';
 function Header() {
   return (
     <header>
-      <Link to="/home">
-        <img src={Logo} alt="logo" />
-      </Link>
-      <nav>
-        <Link to="/home">ACCUEIL</Link>
-        <Link to="/about">A PROPOS</Link>
-      </nav>
+      <div className="header_box">
+        <Link to="/home">
+          <img src={Logo} alt="logo" />
+        </Link>
+        <nav>
+          <Link to="/home">ACCUEIL</Link>
+          <Link to="/about">A PROPOS</Link>
+        </nav>
+      </div>
     </header>
   );
 }

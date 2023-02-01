@@ -1,6 +1,6 @@
 .carrousel {
-  height: 255px;
   width: 335px;
+  height: 255px;
   border-radius: 10px;
   position: relative;
   margin: auto;
@@ -37,5 +37,16 @@
       background-color: transparent;
       font-size: 25px;
     }
+  }
+  &_img_index {
+    position: absolute;
+    z-index: 1;
+    bottom: 6px;
+    right: 45%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: transparent;
   }
 }

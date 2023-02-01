@@ -1,21 +1,29 @@
 @import '../../utils/style/variable';
 
 header {
-  width: 335px;
+  width: 375px;
   height: 47px;
   margin: 20px auto 17px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  .header_box {
+    width: 335px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
   img {
     height: 47px;
     width: 145px;
     left: 0px;
     top: 0px;
     border-radius: 0px;
+    margin: auto;
   }
   nav {
     display: flex;
+    align-items: center;
     gap: 10px;
     a {
       font-size: 12px;

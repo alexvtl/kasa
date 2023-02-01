@@ -1,16 +1,15 @@
 .logement {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 336px;
   margin: 27px auto 100px;
+  width: 375px;
   &_title {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 335px;
-    margin-top: 10px;
+    margin-top: 15px;
     &_h2 {
       font-size: 18px;
     }
