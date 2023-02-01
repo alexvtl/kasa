@@ -1,12 +1,12 @@
 .about {
   width: 336px;
-  margin: auto;
+  margin: 0 auto 100px;
   display: flex;
   flex-direction: column;
   &_banner {
     width: 336px;
     height: 223px;
-    margin: auto;
+    margin: 0px auto 20px;
     &_cover {
       object-fit: cover;
       border-radius: 10px;

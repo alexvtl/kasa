@@ -1,19 +1,41 @@
 import './collapse.scss';
-import CollapseButton from '../CollapseButton';
 import { useState } from 'react';
+import fleche from '../../assets/Vector.png';
 
 function Collapse({ title, texte }) {
   const [isOpen, setisOpen] = useState(false);
   return isOpen ? (
-    <div className="collapse" onclick={() => setisOpen(false)}>
-      <p className="collapse_title">{title}</p>
-      <CollapseButton />
-      <p className="collapse_texte">{texte}</p>
+    <div className="collapse">
+      <div className="collapse_title" onClick={() => setisOpen(false)}>
+        {title}
+        <button
+          className={isOpen ? 'collapse_button_open' : 'collapse_button_close'}
+        >
+          <img
+            className="collapse_button_icon"
+            src={fleche}
+            alt="collapse button"
+          />
+        </button>
+      </div>
+      <div className="collapse_texte">
+        <p>{texte}</p>
+      </div>
     </div>
   ) : (
-    <div className="collapse" onclick={() => setisOpen(true)}>
-      <p className="collapse_title">{title}</p>
-      <CollapseButton />
+    <div className="collapse">
+      <div className="collapse_title" onClick={() => setisOpen(true)}>
+        {title}
+        <button
+          className={isOpen ? 'collapse_button_open' : 'collapse_button_close'}
+        >
+          <img
+            className="collapse_button_icon"
+            src={fleche}
+            alt="collapse button"
+          />
+        </button>
+      </div>
     </div>
   );
 }

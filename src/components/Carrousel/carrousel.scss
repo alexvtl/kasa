@@ -1,0 +1,41 @@
+.carrousel {
+  height: 255px;
+  width: 335px;
+  border-radius: 10px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+
+  &_icon_before {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-90deg);
+    margin-left: 10px;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    i {
+      color: white;
+      background-color: transparent;
+      font-size: 25px;
+    }
+  }
+  &_icon_next {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(90deg);
+    right: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    i {
+      color: white;
+      background-color: transparent;
+      font-size: 25px;
+    }
+  }
+}

@@ -3,7 +3,7 @@ import './card.scss';
 
 function Card({ id, title, cover }) {
   return (
-    <Link className="Card" to={'/logements/' + id}>
+    <Link className="Card" to={'/logement/' + id}>
       <img className="Card_cover" src={cover} alt={title} />
       <span className="Card_title">{title}</span>
     </Link>

@@ -1,28 +1,48 @@
 @import '../../utils/style/variable';
 
 .collapse {
-  height: 30px;
+  height: auto;
   width: 335px;
-  border-radius: 5px;
-  margin: 20px auto;
+  margin: 10px auto;
   display: flex;
-  justify-content: space-between;
-  padding: 5px 10px;
-  background-color: $primary-color;
+  flex-direction: column;
   &_title {
     font-size: 14px;
+    width: 335px;
+    height: 30px;
+    border-radius: 5px;
     color: white;
     margin: auto 0;
+    padding: 5px 10px;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
   }
 }
 .collapse_texte {
   color: $primary-color;
   background-color: $tertiary-color;
-  font-size: 12px;
+  font-family: Montserrat;
   font-weight: 400;
+  font-size: 14px;
   width: 335px;
-  padding: 20px 5px;
-  text-align: center;
+  padding: 23px 7px 53px 11px;
+  border-radius: 5px;
   position: relative;
-  bottom: -100px;
+  top: -7px;
+  z-index: -1;
+}
+
+.collapse_button_close {
+  background-color: $primary-color;
+  border: none;
+  cursor: pointer;
+}
+.collapse_button_open {
+  background-color: $primary-color;
+  border: none;
+  cursor: pointer;
+  transform: rotate(-180deg);
 }

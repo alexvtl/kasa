@@ -1,0 +1,47 @@
+.logement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &_title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 335px;
+    margin-top: 10px;
+    &_h2 {
+      font-size: 18px;
+    }
+    &_p {
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+  &_tags_box {
+    width: 335px;
+    display: flex;
+    gap: 10px;
+    margin: 10px auto;
+  }
+  &_host_box {
+    width: 335px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    height: 33px;
+  }
+  &_host_description {
+    display: flex;
+    gap: 10px;
+    &_name {
+      font-size: 12px;
+      text-align: right;
+    }
+    &_picture {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}

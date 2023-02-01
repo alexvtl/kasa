@@ -4,6 +4,7 @@ import './gallery.scss';
 
 function Gallery() {
   const [datasave, setdatasave] = useState([]);
+
   const getData = () => {
     fetch('/Datas/data.json')
       .then((response) => response.json())
@@ -13,6 +14,7 @@ function Gallery() {
       })
       .catch((error) => console.log(error));
   };
+
   useEffect(() => {
     getData();
   }, []);
