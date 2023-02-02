@@ -53,23 +53,21 @@
     }
   }
   &_img_index {
-    z-index: 1;
-    bottom: 6px;
-    text-align: center;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
     color: transparent;
-    position: absolute;
     @include tablet-only {
-      margin: auto;
+      position: absolute;
+      z-index: 1;
+      bottom: 24px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
       color: white;
-      height: 32.402400970458984px;
+      height: 32.4px;
       width: 24px;
       left: 607px;
-      top: 357.672607421875px;
-      border-radius: nullpx;
+      right: auto;
+      left: 50%;
     }
   }
 }

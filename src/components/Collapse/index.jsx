@@ -8,9 +8,7 @@ function Collapse({ title, texte }) {
     <div className="collapse">
       <div className="collapse_title" onClick={() => setisOpen(false)}>
         {title}
-        <button
-          className={isOpen ? 'collapse_button_open' : 'collapse_button_close'}
-        >
+        <button className="collapse_button_open">
           <img
             className="collapse_button_icon"
             src={fleche}
@@ -26,9 +24,7 @@ function Collapse({ title, texte }) {
     <div className="collapse">
       <div className="collapse_title" onClick={() => setisOpen(true)}>
         {title}
-        <button
-          className={isOpen ? 'collapse_button_open' : 'collapse_button_close'}
-        >
+        <button className="collapse_button_close">
           <img
             className="collapse_button_icon"
             src={fleche}

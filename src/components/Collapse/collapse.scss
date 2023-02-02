@@ -66,6 +66,8 @@
 }
 
 .collapse_button_icon {
+  height: 10px;
+  width: 15px;
   @include tablet-only {
     height: 15px;
     width: 26px;
