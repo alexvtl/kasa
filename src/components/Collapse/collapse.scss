@@ -47,14 +47,9 @@
   z-index: -1;
   @include tablet-only {
     width: 100%;
-    padding: 40px 20px;
+    padding: 40px 20px 27px;
     font-size: 18px;
     font-weight: 500;
-  }
-  .collapse_texte_ {
-    @include tablet-only {
-      margin-bottom: 27px;
-    }
   }
 }
 

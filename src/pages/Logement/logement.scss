@@ -121,11 +121,6 @@
     @include tablet-only {
       font-size: 18px;
     }
-    .equipements > .collapse_texte_box {
-      @include tablet-only {
-        margin-bottom: 0;
-      }
-    }
     &_p {
       margin-bottom: 5px;
     }

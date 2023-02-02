@@ -19,7 +19,7 @@ function Collapse({ title, texte }) {
         </button>
       </div>
       <div className="collapse_texte_box">
-        <p className="collapse_texte">{texte}</p>
+        <p>{texte}</p>
       </div>
     </div>
   ) : (
