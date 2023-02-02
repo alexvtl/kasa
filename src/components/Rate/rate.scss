@@ -1,3 +1,6 @@
+@import '../../utils/style/variable';
+@import '../../utils/style/mixin';
+
 .logement_host_stars {
   display: flex;
   height: 33px;
@@ -6,9 +9,17 @@
   &_red {
     height: 15px;
     width: 15px;
+    @include tablet-only {
+      height: 30px;
+      width: 30px;
+    }
   }
   &_grey {
     height: 15px;
     width: 15px;
+    @include tablet-only {
+      height: 30px;
+      width: 30px;
+    }
   }
 }

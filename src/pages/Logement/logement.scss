@@ -1,28 +1,65 @@
+@import '../../utils/style/mixin';
+@import '../../utils/style/variable';
+
 .logement {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 27px auto 100px;
   width: 375px;
+  @include tablet-only {
+    width: 85%;
+    margin: 20px auto 100px;
+  }
+  &_info_box {
+    width: 375px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet-only {
+      width: 100%;
+      flex-flow: row wrap;
+      align-items: baseline;
+      margin: 30px auto;
+      justify-content: space-between;
+    }
+  }
   &_title {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 335px;
     margin-top: 15px;
+    @include tablet-only {
+      width: 50%;
+      margin-top: 0;
+      gap: 0px;
+    }
     &_h2 {
       font-size: 18px;
+      @include tablet-only {
+        font-size: 36px;
+        font-weight: 500;
+      }
     }
     &_p {
       font-weight: 500;
       font-size: 14px;
+      @include tablet-only {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
     }
   }
   &_tags_box {
     width: 335px;
     display: flex;
     gap: 10px;
-    margin: 10px auto;
+    margin: 0px auto;
+    @include tablet-only {
+      margin: 0;
+    }
   }
   &_host_box {
     width: 335px;
@@ -30,6 +67,14 @@
     display: flex;
     justify-content: space-between;
     height: 33px;
+    @include tablet-only {
+      flex-direction: column-reverse;
+      width: 50%;
+      align-items: flex-end;
+      margin: 0;
+      gap: 24px;
+      height: max-content;
+    }
   }
   &_host_description {
     display: flex;
@@ -40,12 +85,20 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @include tablet-only {
+        font-size: 18px;
+        justify-content: center;
+      }
     }
     &_picture {
       width: 32px;
       height: 32px;
       border-radius: 50%;
       object-fit: cover;
+      @include tablet-only {
+        width: 64px;
+        height: 64px;
+      }
     }
   }
   &_description_box {
@@ -54,10 +107,25 @@
     flex-direction: column;
     gap: 10px;
     margin: 6px auto;
+    @include tablet-only {
+      flex-direction: row;
+      width: 100%;
+      margin: 26px 0px;
+      justify-content: space-between;
+      gap: 76px;
+    }
   }
   &_description_collapse {
     font-size: 12px;
     font-weight: 400;
+    @include tablet-only {
+      font-size: 18px;
+    }
+    .equipements > .collapse_texte_box {
+      @include tablet-only {
+        margin-bottom: 0;
+      }
+    }
     &_p {
       margin-bottom: 5px;
     }

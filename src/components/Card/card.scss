@@ -1,4 +1,5 @@
 @import '../../utils/style/variable';
+@import '../../utils/style/mixin';
 
 .Card {
   position: relative;
@@ -6,6 +7,11 @@
   height: 225px;
   border-radius: 10px;
   overflow: hidden;
+  @include tablet-only {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+  }
   &_cover {
     width: 100%;
     height: 100%;

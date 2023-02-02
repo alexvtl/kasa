@@ -1,4 +1,5 @@
 @import '../../utils/style/variable';
+@import '../../utils/style/mixin';
 
 .tags {
   border-radius: 5px;
@@ -8,11 +9,26 @@
   justify-content: center;
   align-items: center;
   height: 18px;
-  padding: 0px 10px;
+  padding: 0 10px;
+  @include tablet-only {
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 0;
+    justify-content: baseline;
+    align-items: flex-start;
+    width: auto;
+    height: 25px;
+  }
   &_p {
     font-size: 10px;
     color: white;
     margin: 0;
     padding: 0 10px;
+    @include tablet-only {
+      font-size: 14px;
+      line-height: 25px;
+      padding: 0 10px;
+      text-align: center;
+    }
   }
 }

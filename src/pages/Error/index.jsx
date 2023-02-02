@@ -1,14 +1,12 @@
 import { Link } from 'react-router-dom';
-import ErrorLogo from '../../assets/404.png';
+import errorLogo from '../../assets/404.png';
 import './error.scss';
 function Error() {
   return (
     <div className="error">
-      <img className="error_img" src={ErrorLogo} alt="error logo" />
-      <p className="error_txt">
-        Oups! La page que <br /> vous demandez n'existe pas.
-      </p>
-      <Link className="error_link" to="/">
+      <img src={errorLogo} className="error_img" alt="error_img" />
+      <p className="error_txt">Oups! La page que vous demandez n'existe pas.</p>
+      <Link className="error_link" to="/home">
         Retourner sur la page d’accueil
       </Link>
     </div>

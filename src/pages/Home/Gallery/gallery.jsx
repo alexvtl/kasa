@@ -13,7 +13,6 @@ function Gallery() {
       .then((data) => {
         setLoading(false);
         setdatasave(data);
-        console.log(data);
       })
       .catch((error) => console.log(error));
   };

@@ -1,6 +1,6 @@
 import './collapse.scss';
 import { useState } from 'react';
-import fleche from '../../assets/Vector.png';
+import fleche from '../../assets/fleche.png';
 
 function Collapse({ title, texte }) {
   const [isOpen, setisOpen] = useState(false);
@@ -18,8 +18,8 @@ function Collapse({ title, texte }) {
           />
         </button>
       </div>
-      <div className="collapse_texte">
-        <p>{texte}</p>
+      <div className="collapse_texte_box">
+        <p className="collapse_texte">{texte}</p>
       </div>
     </div>
   ) : (

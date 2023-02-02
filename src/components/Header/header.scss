@@ -1,4 +1,5 @@
 @import '../../utils/style/variable';
+@import '../../utils/style/mixin';
 
 header {
   width: 375px;
@@ -7,11 +8,18 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include tablet-only {
+    width: 100%;
+    margin: 40px auto 0;
+  }
   .header_box {
     width: 335px;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    @include tablet-only {
+      width: 85%;
+    }
   }
   img {
     height: 47px;
@@ -25,10 +33,16 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+    @include tablet-only {
+      gap: 57px;
+    }
     a {
       font-size: 12px;
       font-weight: 500;
       text-decoration: none;
+      @include tablet-only {
+        font-size: 24px;
+      }
 
       &:hover {
         text-decoration: underline;

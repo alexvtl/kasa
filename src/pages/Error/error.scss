@@ -1,20 +1,39 @@
+@import '../../utils/style/variable';
+@import '../../utils/style/mixin';
+
 .error {
-  margin: auto;
+  margin: 0px auto;
   width: 375px;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @include tablet-only {
+    width: 100%;
+  }
   &_img {
-    margin: 180px 0px 11px;
-    height: 91px;
-    width: auto;
+    margin: 160px 0px 11px;
+    height: 99px;
+    width: 198px;
+    text-align: center;
+    @include tablet-only {
+      height: 263px;
+      width: 40%;
+      margin: 150px auto 26px;
+    }
   }
   &_txt {
-    font-size: 18px;
-    font-weight: 500;
+    margin: 12px auto;
+    width: 60%;
     text-align: center;
-    margin-top: 40px;
+    @include tablet-only {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      text-align: center;
+      margin-top: 40px;
+      width: 71%;
+    }
   }
   &_link {
     font-size: 14px;

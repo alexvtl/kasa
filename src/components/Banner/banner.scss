@@ -1,17 +1,26 @@
 @import '../../utils/style/variable';
+@import '../../utils/style/mixin';
 
 .banner {
   align-items: center;
   justify-content: center;
   display: flex;
   position: relative;
+  @include tablet-only {
+    width: 100%;
+  }
+
   &_bckground {
     border-radius: 10px;
     filter: brightness(65%);
     height: 111px;
     position: relative;
     width: 335px;
-    object-fit: cover;
+    @include tablet-only {
+      width: 85%;
+      height: 223px;
+      border-radius: 25px;
+    }
   }
   &_txt {
     color: $secondary-color;
@@ -24,5 +33,12 @@
     width: 60%;
     left: 5%;
     bottom: 25%;
+    @include tablet-only {
+      font-size: 48px;
+      text-align: center;
+      left: auto;
+      width: auto;
+      bottom: auto;
+    }
   }
 }

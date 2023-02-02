@@ -32,47 +32,50 @@ function Logement() {
   ) : (
     <div className="logement">
       <Carrousel key={foundLogement.id} slides={foundLogement.pictures} />
-      <div className="logement_title">
-        <h2 className="logement_title_h2">{foundLogement.title}</h2>
-        <p className="logement_title_location">{foundLogement.location}</p>
-      </div>
-      <div className="logement_tags_box">
-        {foundLogement.tags.map((tag) => (
-          <Tags key={tag} tagname={tag} />
-        ))}
-      </div>
-      <div className="logement_host_box">
-        <Rate rating={foundLogement.rating} />
-        <div className="logement_host_description">
-          <p className="logement_host_description_name">
-            <span>{foundLogement.host.name.split(' ')[0]}</span>
-            <span>{foundLogement.host.name.split(' ')[1]}</span>
-          </p>
-          <img
-            className="logement_host_description_picture"
-            src={foundLogement.host.picture}
-            alt={'picure of ' + foundLogement.host.name}
+      <div className="logement_info_box">
+        <div className="logement_title">
+          <h2 className="logement_title_h2">{foundLogement.title}</h2>
+          <p className="logement_title_location">{foundLogement.location}</p>
+          <div className="logement_tags_box">
+            {foundLogement.tags.map((tag) => (
+              <Tags key={tag} tagname={tag} />
+            ))}
+          </div>
+        </div>
+
+        <div className="logement_host_box">
+          <Rate rating={foundLogement.rating} />
+          <div className="logement_host_description">
+            <p className="logement_host_description_name">
+              <span>{foundLogement.host.name.split(' ')[0]}</span>
+              <span>{foundLogement.host.name.split(' ')[1]}</span>
+            </p>
+            <img
+              className="logement_host_description_picture"
+              src={foundLogement.host.picture}
+              alt={'picure of ' + foundLogement.host.name}
+            />
+          </div>
+        </div>
+        <div className="logement_description_box">
+          <Collapse
+            className="logement_description_collapse description"
+            title="Description"
+            texte={foundLogement.description}
+          />
+          <Collapse
+            className="logement_description_collapse equipements"
+            title="Équipements"
+            texte={foundLogement.equipments.map((eqpmt) => (
+              <li
+                className="logement_description_collapse_p"
+                key={eqpmt.toString()}
+              >
+                {eqpmt}
+              </li>
+            ))}
           />
         </div>
-      </div>
-      <div className="logement_description_box">
-        <Collapse
-          className="logement_description_collapse description"
-          title="Description"
-          texte={foundLogement.description}
-        />
-        <Collapse
-          className="logement_description_collapse equipements"
-          title="Équipements"
-          texte={foundLogement.equipments.map((eqpmt) => (
-            <li
-              className="logement_description_collapse_p"
-              key={eqpmt.toString()}
-            >
-              {eqpmt}
-            </li>
-          ))}
-        />
       </div>
     </div>
   );

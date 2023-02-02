@@ -1,3 +1,6 @@
+@import '../../utils/style/mixin';
+@import '../../utils/style/variable';
+
 .carrousel {
   width: 335px;
   height: 255px;
@@ -8,6 +11,11 @@
   align-items: center;
   background-position: center;
   background-size: cover;
+  @include tablet-only {
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+  }
 
   &_icon_before {
     position: absolute;
@@ -22,6 +30,9 @@
       color: white;
       background-color: transparent;
       font-size: 25px;
+      @include tablet-only {
+        font-size: 40px;
+      }
     }
   }
   &_icon_next {
@@ -36,17 +47,29 @@
       color: white;
       background-color: transparent;
       font-size: 25px;
+      @include tablet-only {
+        font-size: 40px;
+      }
     }
   }
   &_img_index {
-    position: absolute;
     z-index: 1;
     bottom: 6px;
-    right: 45%;
+    text-align: center;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     color: transparent;
+    position: absolute;
+    @include tablet-only {
+      margin: auto;
+      color: white;
+      height: 32.402400970458984px;
+      width: 24px;
+      left: 607px;
+      top: 357.672607421875px;
+      border-radius: nullpx;
+    }
   }
 }

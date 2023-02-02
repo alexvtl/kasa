@@ -1,4 +1,4 @@
-import bannerback from '../../assets/Backgroundbanner-mobile.png';
+import bannerback from '../../assets/BackgroundBannerdesktop.png';
 import './banner.scss';
 
 function Banner() {
