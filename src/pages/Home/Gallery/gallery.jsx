@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react';
 import Card from '../../../components/Card';
 import './gallery.scss';
+import Loader from '../../../components/Loader/loader';
 
 function Gallery() {
   const [datasave, setdatasave] = useState([]);
+  const [isLoading, setLoading] = useState(false);
 
   const getData = () => {
     fetch('/Datas/data.json')
       .then((response) => response.json())
       .then((data) => {
+        setLoading(false);
         setdatasave(data);
         console.log(data);
       })
@@ -16,10 +19,13 @@ function Gallery() {
   };
 
   useEffect(() => {
+    setLoading(true);
     getData();
   }, []);
 
-  return (
+  return isLoading ? (
+    <Loader />
+  ) : (
     <div className="gallery">
       {datasave.map((logement, index) => (
         <Card
