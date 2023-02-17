@@ -1,34 +1,15 @@
 import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import Carrousel from '../../components/Carrousel/carrousel.jsx';
 import api from '../../Products/product.json';
 import Tags from '../../components/Tags/tags.jsx';
 import Rate from '../../components/Rate/rate.jsx';
 import Collapse from '../../components/Collapse/index.jsx';
 import './logement.scss';
-import axios from 'axios';
 
 function Logement() {
   const { id } = useParams();
-  //const [Data, saveData] = useState([]);
-  const foundLogement = api.find((logement) => {
-    return logement.id === id;
-  });
-  const [daatta, savedata] = useState([]);
 
-  useEffect(() => {
-    //=> permet d'effectuer une action, ici une requête GET, à un moment donné du cycle de vie du composant
-    const displayLocation = async () => {
-      const result = await axios.get('/Datas/data.json'); //axios va me chercher l'Url, récupère les data sans besoin de convertir au format json
-      const logement = result.data.find((item) => item.id === id);
-
-      savedata(logement);
-    };
-    displayLocation();
-    // eslint-disable-next-line
-  }, []);
-
-  console.log(daatta);
+  const foundLogement = api.find((item) => item.id === id);
 
   return (
     <div className="logement">
