@@ -1,11 +1,11 @@
 import bannerback from '../../assets/BackgroundBannerdesktop.png';
 import './banner.scss';
 
-function Banner() {
+function Banner({ title }) {
   return (
     <div className="banner">
       <img className="banner_bckground" src={bannerback} alt="banner" />
-      <h1 className="banner_txt">Chez vous, partout et ailleurs</h1>
+      <h1 className="banner_txt">{title}</h1>
     </div>
   );
 }

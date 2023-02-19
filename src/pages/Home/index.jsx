@@ -5,7 +5,7 @@ import './Home.scss';
 function Home() {
   return (
     <div className="Home">
-      <Banner />
+      <Banner title="Chez vous, partout et ailleurs" />
       <Gallery />
     </div>
   );
