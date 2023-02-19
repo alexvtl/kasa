@@ -4,6 +4,7 @@ import api from '../../Products/product.json';
 import Tags from '../../components/Tags/tags.jsx';
 import Rate from '../../components/Rate/rate.jsx';
 import Collapse from '../../components/Collapse/index.jsx';
+import Error from '../Error/index.jsx';
 import './logement.scss';
 
 function Logement() {
@@ -11,7 +12,7 @@ function Logement() {
 
   const foundLogement = api.find((item) => item.id === id);
 
-  return (
+  return foundLogement ? (
     <div className="logement">
       <Carrousel key={foundLogement.id} slides={foundLogement.pictures} />
       <div className="logement_info_box">
@@ -60,6 +61,8 @@ function Logement() {
         </div>
       </div>
     </div>
+  ) : (
+    <Error />
   );
 }
 
