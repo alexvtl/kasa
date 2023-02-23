@@ -45,7 +45,11 @@ function Carrousel({ slides }) {
     <div
       className="carrousel"
       style={{ backgroundImage: `url(${slides[currentIndex]})` }}
-    ></div>
+    >
+      <div className="carrousel_img_index">
+        {currentIndex + 1}/{slides.length}
+      </div>
+    </div>
   );
 }
 

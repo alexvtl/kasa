@@ -26,9 +26,9 @@ function Gallery() {
     <Loader />
   ) : (
     <div className="gallery">
-      {datasave.map((logement, index) => (
+      {datasave.map((logement) => (
         <Card
-          key={`${logement.id}+${index}`}
+          key={`${logement.id}`}
           id={logement.id}
           title={logement.title}
           cover={logement.cover}
